@@ -20,7 +20,7 @@ When('I set the origin city to {string}', async function (city) {
   const fromBtn = await page.getByRole('button', { name: /from/i });
   await fromBtn.click();
   // Wait a bit to ensure input is focused
-  await page.waitForTimeout(400);
+  await page.waitForTimeout(2000);
   // Type the city name all at once (input should be focused after clicking button)
   await page.keyboard.type(city, { delay: 100 });
   // Wait for the suggestion containing the full city name and click it

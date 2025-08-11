@@ -7,5 +7,6 @@
   "devDependencies": {
     "@cucumber/cucumber": "^12.1.0",
     "@playwright/test": "^1.44.0"
-  }
+  },
+  "type": "module"
 }
