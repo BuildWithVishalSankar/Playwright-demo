@@ -1,0 +1,27 @@
+{
+  "name": "amazon-laptop-search-tests",
+  "version": "1.0.0",
+  "description": "Playwright tests for Amazon laptop search and purchase flow",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:codegen": "playwright codegen https://www.amazon.com"
+  },
+  "keywords": [
+    "playwright",
+    "testing",
+    "amazon",
+    "e2e",
+    "automation"
+  ],
+  "author": "Vishal",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

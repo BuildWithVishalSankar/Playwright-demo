@@ -1,0 +1,11 @@
+1. Navigate to https://www.amazon.com
+2. In the search bar, search for "Laptops"
+3. Set the filter for Display size as "15 to 15.9" Inches
+4. Set the filter for RAM size as "8 GB"
+5. Set the filter for brand as "HP"
+6. Sort the products by "Avg. Customer Review"
+7. Select the first product found
+8. Click "See All Buying Options" if the button is present
+9. Click "Add to Cart" button
+10. Click "Go to Cart" button
+11. Click "Proceed to Checkout"
