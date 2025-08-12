@@ -6,7 +6,10 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "^12.1.0",
-    "@playwright/test": "^1.44.0"
+    "@playwright/test": "^1.54.2",
+    "cucumber-js": "^1.0.0",
+    "playwright": "^1.54.2",
+    "ts-node": "^10.9.2"
   },
   "type": "module"
 }

@@ -1,6 +1,10 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 
+/*
+ npx cucumber-js tests/login.feature --import tests/login.steps.ts --import tests/support/world.ts --loader ts-node/esm
+*/
+
 Given('I navigate to {string}', async function (url: string) {
     await this.page.goto(url);
 });
