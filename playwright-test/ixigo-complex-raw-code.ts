@@ -1,0 +1,37 @@
+import { test, expect } from '@playwright/test';
+
+test('test', async ({ page }) => {
+  await page.goto('https://www.ixigo.com/');
+  await page.getByRole('tab', { name: 'Round Trip' }).click();
+  await page.getByTestId('originId').getByText('From').click();
+  await page.getByRole('textbox').fill('delhi');
+  await page.getByRole('listitem').filter({ hasText: 'DELNew Delhi, Delhi,' }).click();
+  await page.getByRole('textbox').fill('mumbai');
+  await page.getByText('BOMMumbai, Maharashtra,').click();
+  await page.getByRole('button', { name: '25 September 2025 4800' }).click();
+  await page.getByRole('button', { name: '29 September 2025' }).click();
+  await page.locator('div').filter({ hasText: /^Adults12 yrs or above123456789$/ }).getByTestId('2').click();
+  await page.locator('div').filter({ hasText: /^Children2 - 12 yrs012345678$/ }).getByTestId('1').click();
+  await page.locator('div').filter({ hasText: /^Premium Economy$/ }).click();
+  await page.getByRole('button', { name: 'Done' }).click();
+  await page.getByRole('button', { name: 'Search' }).click();
+  await page.getByRole('listitem').filter({ hasText: 'Free meal available' }).getByRole('checkbox').check();
+  await page.goto('https://www.ixigo.com/search/result/flight?from=DEL&to=BOM&date=25092025&returnDate=29092025&adults=2&children=1&infants=0&class=w&source=Search+Form&freeMeal=true');
+  await page.getByRole('listitem').filter({ hasText: 'Non-Stop' }).getByRole('checkbox').check();
+  await page.goto('https://www.ixigo.com/search/result/flight?from=DEL&to=BOM&date=25092025&returnDate=29092025&adults=2&children=1&infants=0&class=w&source=Search+Form&freeMeal=true&stops=0');
+  await page.getByText('CheapestAir India13:15DEL2h').click();
+  await page.getByText('CheapestAir India11:50BOM2h').click();
+  await page.getByText('Flight Details').click();
+  await page.getByRole('tab', { name: 'Cancellation' }).click();
+  await page.getByRole('tab', { name: 'Rescheduling' }).click();
+  await page.getByRole('button', { name: 'View Terms & Conditions' }).click();
+  await page.getByRole('button', { name: 'Hide Terms & Conditions' }).click();
+  await page.locator('#portal-root').getByTestId('CloseIcon').click();
+  await page.getByRole('button', { name: 'Book' }).click();
+  await page.getByRole('radio', { name: 'NEWFLY' }).check();
+  await page.goto('https://www.ixigo.com/flight/booking/1044/1q4h30lhtvpntvhtnpntvhthdhphah8ojqh96ohduputptvdskvvtwnt?fareKey=DEL-BOM-AI2951-25092025+BOM-DEL-AI2419-29092025&providers=1044&hbo=false&hboRw=false&ftk=DEL|BOM|250925|290925|2|1|0|w|INR|18082025134552792$1044+18082025134552792$1044|DEL-BOM-AI2951+BOM-DEL-AI2419|false|true|9252135.82~14248.0~9263963.0~9249715.0~9249715.0~318b523b-483f-43ae-9744-3dc2b3e965e8+9c205b0d-8282-4629-b33e-d9f22dfa625a&source=Search+Form&loginVisible=true');
+  await page.getByRole('button').filter({ hasText: /^$/ }).click();
+  await page.getByRole('button', { name: 'View All Offers' }).click();
+  await page.getByTestId('CloseIcon').click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+});

@@ -9,4 +9,3 @@ Feature: Purchase a laptop from Amazon India
         And I open the first Apple MacBook Air laptop result
         And I add the laptop to the cart
         And I proceed to buy the laptop
-# Then I should see the checkout page
