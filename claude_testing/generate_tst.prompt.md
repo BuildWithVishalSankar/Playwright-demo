@@ -2,6 +2,8 @@
 - You are given a scenario and you need to generate a playwright test for it.
 - The scenario will be provided in a structured format in steps in the scenario.txt file.
 - Create Gherkin steps in a feature file and save it under tests based on the scenario and use BDD principles.
+- Create step definitions for each line in the feature file created, and store it under tests/step-definitions.
+- Create page objects for each page in the scenario and store it under tests/page-objects.
 - The test steps should be clear and concise.
 - Each step should represent a single action or assertion.
 - DO NOT generate test code based on the scenario alone.
